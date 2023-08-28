@@ -1,56 +1,51 @@
+// constans
 let apikey="35e12f6ca3bd8bc9fccc68dcf71236e7";
 let movies_gener_access_tool="https://api.themoviedb.org/3/genre/movie/list?api_key="+apikey;
+
+// storing null value for buttons hovering section
 let selectedbtn=null;
 let all_movies_gener=[];
 let all_movies_gener_data=[];
 
 // navbar section 
 let navbar=document.createElement('div');
-navbar.style.border="1px";
-navbar.style.borderRadius="10px";
-document.body.append(navbar);
+    navbar.style.border="1px";
+    navbar.style.borderRadius="10px";
+    document.body.append(navbar);
+    let navbar_background_img=document.createElement('div');
+    navbar_background_img.style.padding="50px";
+    navbar_background_img.style.borderRadius="10px";
+    navbar_background_img.style.backgroundImage="url(https://wallpapercave.com/wp/wp1945898.jpg)";
+    navbar_background_img.style.animation="anime 6s linear infinite";
+    navbar.appendChild(navbar_background_img);
+    let Title=document.createElement('div');
+    Title.textContent="Movie Reviewer";
+    Title.style.textAlign="center";
+    Title.style.color="rgba(100,50,20,0.9)";
+    Title.style.fontSize="80px";
+    Title.style.fontWeight="900";
+    navbar_background_img.appendChild(Title);
 
 
-let navbar_background_img=document.createElement('div');
-navbar_background_img.style.padding="50px";
-navbar_background_img.style.borderRadius="10px";
-navbar_background_img.style.backgroundImage="url(https://wallpapercave.com/wp/wp1945898.jpg)";
-navbar_background_img.style.animation="anime 6s linear infinite";
-
-navbar.appendChild(navbar_background_img);
-
-let Title=document.createElement('div');
-Title.textContent="Movie Reviewer";
-Title.style.textAlign="center";
-Title.style.color="rgba(100,50,20,0.9)";
-Title.style.fontSize="80px";
-Title.style.fontWeight="900";
-
-navbar_background_img.appendChild(Title);
-
-
-
+// Main data section
 let big_div=document.createElement('div');
 let postersdiv=document.createElement('div');
 document.body.append(postersdiv);
-
 let buttons_div=document.createElement('div');
 buttons_div.style.display='flex';
 buttons_div.style.flexDirection='row';
 buttons_div.style.overflowX='auto';
 
+// show more section
 let show_more_button=document.createElement('a');
 show_more_button.textContent="Show All";
 show_more_button.href="detail.html";
 show_more_button.style.padding="1%";
-
 show_more_button.style.border="1px";
 show_more_button.style.backgroundColor="gray";
 show_more_button.style.borderRadius="10px";
 
-
-
-
+// Movie geners fetching
 async function geners(){
 
     // here fetching the gener access tools
@@ -72,15 +67,11 @@ async function geners(){
         button.style.color='white';
         button.style.margin="1%";
         button.style.padding="1%";
-
         button.style.paddingTop="0.5%";
         button.style.paddingBottom="0.5%";
         buttons_div.style.textAlign="center";
         button.style.fontSize="16px";
         button.style.fontWeight="400";
-
-
-        
         document.body.append(buttons_div);
         buttons_div.appendChild(button);
  
@@ -88,15 +79,13 @@ async function geners(){
         button.addEventListener('click',function() {
             postersdiv.textContent='';
 
-          //  gener button hovering 
+          //  gener button hovering using null value 
             if (selectedbtn) {
             selectedbtn.style.background='';
             selectedbtn.style.color='white';
             selectedbtn.style.fontSize='';
-
             selectedbtn.style.borderRadius='';
             selectedbtn.style.borderStyle='';
-
            }
             button.style.backgroundColor='rgba(9,0,0,0.5)';
             button.style.color="white";
@@ -105,18 +94,15 @@ async function geners(){
             button.style.borderStyle="solid";
             button.style.borderColor="white";
             button.style.borderWidth="1px";
-
-           selectedbtn=button;
+             selectedbtn=button;
              let name=i.name;
              let id=i.id;
-        
              show_more_button.id=i.id;
              show_more_button.className=i.name;
 
             // here pass the values in a local storage
              let all_movie_type_data=[];
              let particular_movie_anchortag;
-
              let particular_movie_imgtag;
 
 
@@ -202,7 +188,7 @@ all_movie_fetch_data();
    big_div.appendChild(postersdiv);
    
 
-
+// constans of top movies
 let all_data=[];
 let anchortag;
 let img_id=[];
@@ -212,6 +198,7 @@ let imgtag;
 let all_movies_id=[];
 let all_movies_type=[];
 
+// Top movie section
 let top_Movies_parent_div=document.createElement('div');
 let top_Movies_heading=document.createElement('div');
 top_Movies_heading.textContent="Top Movies";
@@ -223,12 +210,9 @@ top_Movies_heading.style.color='#f1c40f';
 top_Movies_heading.style.textShadow='1px 1px 2px rgba(0,0,0,0.5)';
 top_Movies_parent_div.appendChild(top_Movies_heading);
 
-
-
-
-
-for (let topmovies_index = 1; topmovies_index < 5; topmovies_index++) {
-  
+// fetching top movies
+for (let topmovies_index = 1; topmovies_index < 5; topmovies_index++) {  //this for loop used to loop the movie pages
+  // top movie link
 let Top_movies_api= "https://api.themoviedb.org/3/movie/popular?api_key="+apikey+"&language=en-US&page="+topmovies_index;
 
 async function fetch_data() {
@@ -245,12 +229,9 @@ async function fetch_data() {
     
     function data_access() {
          data[0].forEach((k,l)=> {
-        
-           
             anchortag=document.createElement('a');
             anchortag.href="moviedetails.html";
             anchortag.id="a";
-
             imgtag=document.createElement('img');
 
             let img_path="https://image.tmdb.org/t/p/w500";
@@ -260,7 +241,6 @@ async function fetch_data() {
             imgtag.width='190';
             imgtag.height='250';
             imgtag.id=l;
-           
             imgtag.style.borderRadius='10px';
             imgtag.style.padding='4px';
             imgtag.alt="Movies";
