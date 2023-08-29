@@ -28,7 +28,7 @@ let all_movies_id=[];
 let all_movies_type=[];
 
 // This for loop is used to looping page
-for (let i = 1; i < 10; i++) {
+for (let i = 10; i < 30; i++) {
   // This link 'i' represent the page and 'ids' represent the movie id
    let movies_gener_access_tool="https://api.themoviedb.org/3/discover/movie?api_key="+apikey+"&language=en-US&page="+i+"&vote_average.gte=7.0&with_genres="+ids;
    async function fetch_data() {
