@@ -89,7 +89,7 @@ async function geners(){
             selectedbtn.style.borderStyle='';
            }
             button.style.backgroundColor='rgba(9,0,0,0.5)';
-            button.style.color="white";
+            button.style.color="#fd8a04";
             button.style.fontSize="15px";
             button.style.borderRadius="20%";
             button.style.borderStyle="solid";
