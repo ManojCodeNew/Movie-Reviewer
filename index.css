@@ -12,3 +12,12 @@
    background:linear-gradient(to right,#205072,#138086,#534666) ;
 
  }
+.movie_poster:hover{
+width: 198px;
+height: 255px;
+padding: 6px;
+opacity: 0.7;
+}
+.geners:hover{
+  color: black;
+}

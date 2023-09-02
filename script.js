@@ -61,6 +61,7 @@ async function geners(){
        
         // here creating all movie types buttons
         let button=document.createElement('p');
+        button.className="geners";
         button.id=i.id;
         button.textContent=i.name;
         button.style.cursor='pointer';
@@ -133,14 +134,14 @@ for (let i = 1; i < 2; i++) {
             let half_img_path=k.poster_path;
             let full_img_path=img_path+half_img_path;
             particular_movie_imgtag.src=full_img_path;
-            particular_movie_imgtag.width='200';
+            particular_movie_imgtag.width='190';
             particular_movie_imgtag.height='250';
             particular_movie_imgtag.id=l;
-            particular_movie_imgtag.style.borderRadius='10px';
-            particular_movie_imgtag.style.padding='4px';
-            particular_movie_imgtag.className=i; 
+            particular_movie_imgtag.style.borderRadius='5%';
+            particular_movie_imgtag.style.padding='5px';
+            particular_movie_imgtag.className="movie_poster"; 
             particular_movie_imgtag.alt="Movies";
-            
+           
             
             postersdiv.appendChild(particular_movie_anchortag); 
             particular_movie_anchortag.appendChild(particular_movie_imgtag);
@@ -244,7 +245,7 @@ async function fetch_data() {
             imgtag.style.borderRadius='10px';
             imgtag.style.padding='4px';
             imgtag.alt="Movies";
-
+            imgtag.className="movie_poster";
             document.body.append(top_Movies_parent_div);
             
             top_Movies_parent_div.appendChild(anchortag);

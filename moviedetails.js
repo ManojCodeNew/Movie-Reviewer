@@ -121,7 +121,7 @@ videos_container.style.padding="1%";
 // Movie Trailer accessing section
 let apikey="AIzaSyCa0k_y9XnVB00GwZ8nhBhlUCYIbmlP5rU";
 
-let trailer_apilink="https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q="+m_name+"trailer&type=video&key="+apikey;   
+let trailer_apilink="https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=1&q="+m_name+" trailer&type=video&key="+apikey;   
 async function trailer_fetching() {
     let trailerResults=await fetch(trailer_apilink);
     let jsonconvert=await trailerResults.json();
@@ -131,7 +131,7 @@ async function trailer_fetching() {
 trailer_fetching();
 
    let  trailer_container=document.createElement('div');
-   trailer_container.style.ma="10px"
+//    trailer_container.style.ma="10px";
 
    let trailer_container_heading=document.createElement('h3');
    trailer_container_heading.textContent="Trailer";
@@ -139,7 +139,7 @@ trailer_fetching();
     trailer_container_heading.style.fontWeight="900";
 
     let movie_trailer_holder=document.createElement('a');
-    movie_trailer_holder.href="https://www.youtube.com/search?q="+m_name+" trailer";
+    movie_trailer_holder.href="https://www.youtube.com/search?q="+m_name+" Trailer";
     movie_trailer_holder.style.color="red";
 
 
@@ -159,6 +159,7 @@ trailer_fetching();
     trailer_container.appendChild(movie_trailer_holder);
     movie_trailer_holder.appendChild(trailer_logo);
     
+
 
 
 let music_container=document.createElement('div');
@@ -199,7 +200,6 @@ movie_review_heading.style.fontWeight="900";
 
 let movie_review_linking=document.createElement('a');
 movie_review_linking.href="https://www.youtube.com/search?q="+m_name+" reviews";
-console.log(movie_review_linking);
 let movie_review_logo=document.createElement('img');
 movie_review_logo.src="https://thumbs.dreamstime.com/b/movie-reviews-icon-elegant-cyan-blue-diamond-button-movie-reviews-icon-isolated-elegant-cyan-blue-diamond-button-abstract-104730279.jpg";
 movie_review_logo.alt="This image is not loading...";
