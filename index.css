@@ -19,5 +19,7 @@ padding: 6px;
 opacity: 0.7;
 }
 .geners:hover{
-  color: black;
+  background-color: #566370;
+  border-radius: 15%;
+  border: 2px solid black;
 }
