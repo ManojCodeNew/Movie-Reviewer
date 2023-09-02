@@ -2,3 +2,10 @@ body{
    background:linear-gradient(to right,#205072,#138086,#534666) ;
     
 }
+/* posters hovering section */
+.movie_poster:hover{
+   width: 158px;
+   height: 205px;
+   padding: 6px;
+   opacity: 0.7;
+   }

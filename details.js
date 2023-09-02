@@ -12,8 +12,6 @@ movie_name_section.style.padding="2%";
 movie_name_section.style.borderRadius="9px";
 movie_name_section.style.textAlign="center";
 movie_name_section.style.background="linear-gradient(to bottom,#b60f46,#e27c39)";
-// movie_name_section.style.background="linear-gradient(#cc2b5e,#753a88)";
-
 
 let apikey="35e12f6ca3bd8bc9fccc68dcf71236e7";
 let all_data=[];
@@ -43,14 +41,14 @@ for (let i = 10; i < 30; i++) {
     let data=[];
     data.push(results);
    
-    // 
+    // displaying top movie posters
     function data_access() {
          data[0].forEach((k,l)=> {
             let div=document.getElementById('top');
             anchortag=document.createElement('a');
             anchortag.href="moviedetails.html";
             anchortag.id="a";
-
+            // movie posters section
             imgtag=document.createElement('img');
 
             let img_path="https://image.tmdb.org/t/p/w500";
@@ -62,7 +60,7 @@ for (let i = 10; i < 30; i++) {
             imgtag.id=l;
             imgtag.style.borderRadius='10px';
             imgtag.style.padding='4px';
-            imgtag.className=i; 
+            imgtag.className="movie_poster"; 
             imgtag.alt="Movies";
             
             document.body.append(div);
