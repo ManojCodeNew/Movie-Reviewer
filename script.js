@@ -139,8 +139,8 @@ async function geners() {
               let half_img_path = k.poster_path;
               let full_img_path = img_path + half_img_path;
               particular_movie_imgtag.src = full_img_path;
-              particular_movie_imgtag.width = '190';
-              particular_movie_imgtag.height = '250';
+              particular_movie_imgtag.width = '160';
+              particular_movie_imgtag.height = '200';
               particular_movie_imgtag.id = l;
               particular_movie_imgtag.style.borderRadius = '5%';
               particular_movie_imgtag.style.padding = '5px';
@@ -208,15 +208,15 @@ async function geners() {
   let top_Movies_parent_div = document.createElement('div');
   let top_Movies_heading = document.createElement('div');
   top_Movies_heading.textContent = "Top Movies";
-  top_Movies_heading.style.fontSize = '3vw';
+  top_Movies_heading.style.fontSize = '2vw';
   top_Movies_heading.style.fontWeight = '900';
   top_Movies_heading.style.padding = '10px';
   top_Movies_heading.style.margin = '1%';
   top_Movies_heading.style.marginTop = '4%';
-  top_Movies_heading.style.backgroundColor = 'firebrick';
+  top_Movies_heading.style.backgroundColor = '#ADD8E6';
   top_Movies_heading.style.borderRadius= '10px';
   top_Movies_heading.style.textAlign = 'center';
-  top_Movies_heading.style.color = 'white';
+  top_Movies_heading.style.color = 'black';
   top_Movies_heading.style.textShadow = '1px 1px 2px rgba(00,0,0,0.5)';
   top_Movies_parent_div.appendChild(top_Movies_heading);
 
@@ -248,8 +248,8 @@ async function geners() {
           let half_img_path = k.poster_path;
           let full_img_path = img_path + half_img_path;
           imgtag.src = full_img_path;
-          imgtag.width = '190';
-          imgtag.height = '250';
+          imgtag.width = '160';
+          imgtag.height = '200';
           imgtag.id = l;
           imgtag.style.borderRadius = '10px';
           imgtag.style.padding = '4px';
