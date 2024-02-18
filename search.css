@@ -1,0 +1,19 @@
+body {
+    background: linear-gradient(to right, #205072, #138086, #534666);
+  }
+
+  #search_box_div{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  #search_btn{
+    background-color: rgb(30, 145, 17);
+    color: white;
+    margin: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    font-size: large;
+    /* margin-right: 8px; */
+  }

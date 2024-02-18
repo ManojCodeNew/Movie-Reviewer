@@ -22,9 +22,9 @@ body {
 }
 
 .geners:hover {
-  background-color: #566370;
+  /* background-color: #566370; */
   border-radius: 15%;
-  border: 2px solid black;
+  border: 2px solid rgb(251, 250, 250);
 }
 
 @media screen and (max-width:700px) {
@@ -42,4 +42,14 @@ body {
     width: 150px;
     height: 200px;
   }
+}
+.Show_All:hover{
+  background-color: #b6b6b64d;
+}
+@keyframes blink {
+  0%{opacity: 0;color: #bfdbfe;}
+  50%{opacity: 1;color: #facc15;}
+  100%{opacity: 0;color: #10b981;}
+
+  
 }

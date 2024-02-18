@@ -28,6 +28,18 @@ Title.style.color = "rgba(100,50,20,0.9)";
 Title.style.fontSize = "50px";
 Title.style.fontWeight = "900";
 navbar_background_img.appendChild(Title);
+let search_page_link=document.createElement('p');
+let linking_tool=document.createElement('a');
+linking_tool.href='search.html';
+linking_tool.style.textDecoration='none'
+search_page_link.innerHTML="Click here to search for movies &#x2192      ";
+search_page_link.style.animation='blink 1s infinite';
+search_page_link.style.textAlign='right';
+search_page_link.style.color='#ff5733'
+document.body.append(linking_tool);
+linking_tool.appendChild(search_page_link);
+
+
 
 
 // Main data section
@@ -41,14 +53,26 @@ buttons_div.style.overflowX = 'auto';
 
 // show more section
 let show_more_button = document.createElement('a');
+show_more_button.className = "Show_All";
 show_more_button.textContent = "Show All";
 show_more_button.href = "detail.html";
-show_more_button.style.padding = "2%";
-show_more_button.style.marginTop= "7%";
-// show_more_button.style.backgroundSize = "cover";
-show_more_button.style.border = "1px";
-show_more_button.style.backgroundColor = "gray";
+show_more_button.style.padding = "10px";
+show_more_button.style.marginTop= "10%";
+
+show_more_button.style.color='White';
+show_more_button.style.textDecorationLine='none';
+
+
+
+
+show_more_button.style.border='2px';
+show_more_button.style.borderColor='white';
+show_more_button.style.borderStyle='solid';
+
+
 show_more_button.style.borderRadius = "10px";
+
+
 
 // Movie geners fetching
 async function geners() {
@@ -93,13 +117,13 @@ async function geners() {
         selectedbtn.style.borderRadius = '';
         selectedbtn.style.borderStyle = '';
       }
-      button.style.backgroundColor = 'rgba(9,0,0,0.5)';
-      button.style.color = "#fd8a04";
-      button.style.fontSize = "15px";
+      button.style.backgroundColor = '#9ca3af';
+      button.style.color = "black";
+      button.style.fontSize = "large";
       button.style.borderRadius = "20%";
       button.style.borderStyle = "solid";
-      button.style.borderColor = "white";
-      button.style.borderWidth = "1px";
+      button.style.borderColor = "White";
+      button.style.border = "2px";
       selectedbtn = button;
       let name = i.name;
       let id = i.id;
@@ -126,8 +150,9 @@ async function geners() {
 
           // all_data variable stored all results of a movie id
           const data = [results];
-
+      
           function all_movie_data_access() {
+            
             data[0].forEach((k, l) => {
               particular_movie_anchortag = document.createElement('a');
               particular_movie_anchortag.href = "moviedetails.html";
@@ -208,6 +233,7 @@ async function geners() {
   let top_Movies_parent_div = document.createElement('div');
   let top_Movies_heading = document.createElement('div');
   top_Movies_heading.textContent = "Top Movies";
+  top_Movies_heading.className="Top Movies"
   top_Movies_heading.style.fontSize = '2vw';
   top_Movies_heading.style.fontWeight = '900';
   top_Movies_heading.style.padding = '10px';
