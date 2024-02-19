@@ -61,13 +61,14 @@ let poster_container = document.createElement('img');
 function onChangehandle(e) {
     let search_data = e.target.value;
     search_btn.addEventListener('click', function () {
-        search_box_div.removeChild(autoSuggestionBox)
+        // search_box_div.removeChild(autoSuggestionBox)
         if (All_movie) {
             All_movie.some((element, index) => {
                 return element.some((movie, i) => {
                     console.log(movie.title);
 
                     if (movie.title == search_data) {
+                        console.log("Found");
 
                         let movie_poster_container = document.createElement('div');
 
