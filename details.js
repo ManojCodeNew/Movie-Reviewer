@@ -4,15 +4,18 @@ let ids = localStorage.getItem("id")
 let movie_name_section = document.getElementById('h3');
 movie_name_section.innerHTML = movie_type_name;
 movie_name_section.style.fontSize = "25px";
-movie_name_section.style.color = "";
+movie_name_section.style.backgroundColor = "#14b8a6";
+movie_name_section.style.color = "white";
+
 movie_name_section.style.fontWeight = "900";
 movie_name_section.style.margin = "0%";
 movie_name_section.style.marginBottom = "1%";
 movie_name_section.style.padding = "2%";
 movie_name_section.style.borderRadius = "9px";
 movie_name_section.style.textAlign = "center";
-movie_name_section.style.background = "linear-gradient(to bottom,#b60f46,#e27c39)";
-
+  // box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset;
+  // movie_name_section.style.boxShadow="rgba(45, 35, 66, 0.4) 0 2px 4px,rgba(45, 35, 66, 0.3) 0 7px 13px -3px,#D6D6E7 0 -3px 0 inset"
+// movie_name_section.style.background = "linear-gradient(to bottom,#b60f46,#e27c39)";
 let apikey = "35e12f6ca3bd8bc9fccc68dcf71236e7";
 let all_data = [];
 let anchortag;
