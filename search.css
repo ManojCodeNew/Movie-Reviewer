@@ -21,3 +21,7 @@ body {
     text-align: center;
     color: #67e8f9;
   }
+  .poster:hover{
+    width: 170px;
+    height: 220px;
+  }
